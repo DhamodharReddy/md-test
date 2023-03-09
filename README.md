@@ -34,9 +34,11 @@ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 ```
 
 Enable IP tables
+
 We need to enable IT tables for pod to pod communication.
 
-```modprobe br_netfilter
+```
+modprobe br_netfilter
 sysctl -p
 sudo sysctl net.bridge.bridge-nf-call-iptables=1
 ```
@@ -56,6 +58,7 @@ systemctl enable docker.service
 ```
 
 Type exit to come out of root user.
+
 Install Kubernetes Modules
 ```
 sudo apt-get install -y kubelet=1.22.2-00 kubeadm=1.22.2-00 kubectl=1.22.2-00 kubernetes-cni
@@ -91,7 +94,7 @@ sudo systemctl restart kubelet
 
 ### **Initialize Kubeadm on Master Node(only on Master Node)**
 
-**#**Execute the below command as root user to initialize Kubernetes Master node.**
+**Execute the below command as root user to initialize Kubernetes Master node.**
 ```
 sudo su -
 kubeadm init
@@ -111,7 +114,7 @@ Installing the Weave Net Add-On
 ```
 kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
 ```
-It make take a few mins to execute the above command and show show the below message.
+It make take a few mins to execute the above command.
 
 Now execute the below command to see the pods.
 ```
