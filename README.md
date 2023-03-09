@@ -5,9 +5,10 @@
 2. Ubuntu instance with at least 2 GB RAM - Worker Node - (with ports open to all traffic)
 
 Links refered:
-[coachdevops](https://www.coachdevops.com/2020/06/how-to-setup-kubernetes-cluster-in.html)
 
-[stackoverflow](https://stackoverflow.com/questions/52119985/kubeadm-init-shows-kubelet-isnt-running-or-healthy)
+* [coachdevops](https://www.coachdevops.com/2020/06/how-to-setup-kubernetes-cluster-in.html)
+
+* [stackoverflow](https://stackoverflow.com/questions/52119985/kubeadm-init-shows-kubelet-isnt-running-or-healthy)
 
 ## **Kubernetes Setup using Kubeadm**
 
