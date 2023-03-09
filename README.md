@@ -28,7 +28,8 @@ sudo apt-get update
 ```
 Disable swap memory for better performance
 
-```swapoff -a
+```
+swapoff -a
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 ```
 
